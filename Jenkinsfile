@@ -9,7 +9,7 @@ def imageRepo = "125968943346.dkr.ecr.ca-central-1.amazonaws.com"
 def chart_name = "vegitone/vegitone-app"
 // IF BRANCH is PR then do not split it
 def ENVIRONMENT_NAME = (env.BRANCH_NAME.startsWith("PR")) ? env.BRANCH_NAME : extractEnvName(env.BRANCH_NAME)
-def aws_agent = "aws-common-creds"
+
 def java_opts = ""
 
 podTemplate(label: buildLabel, serviceAccount: "helm-deployer", nodeSelector: "env: jenkins-build",containers: [
