@@ -4,7 +4,7 @@
 def project_name = 'vegitone'
 def project_service_name = 'store-api'
 def buildLabel = "slave.${env.JOB_NAME}.${env.BUILD_NUMBER}".replace('-', '_').replace('/', '_')
-def awsRegion = "ca-central-1"
+
 def imageRepo = "125968943346.dkr.ecr.ca-central-1.amazonaws.com"
 def chart_name = "vegitone/vegitone-app"
 // IF BRANCH is PR then do not split it
